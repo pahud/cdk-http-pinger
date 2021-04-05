@@ -39,6 +39,7 @@ const automation = new Automation(project, {
 });
 
 automation.projenYarnUpgrade();
+automation.autoApprove();
 
 const common_exclude = [
   'cdk.out',

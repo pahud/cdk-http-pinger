@@ -2,7 +2,7 @@ import * as path from 'path';
 import * as lambda from '@aws-cdk/aws-lambda';
 import { NodejsFunction } from '@aws-cdk/aws-lambda-nodejs';
 import * as logs from '@aws-cdk/aws-logs';
-import { App, Construct, Stack, CustomResource, CfnOutput } from '@aws-cdk/core';
+import { Construct, CustomResource } from '@aws-cdk/core';
 import * as cr from '@aws-cdk/custom-resources';
 
 export interface PingerProps {
@@ -55,22 +55,3 @@ function jsonStringifiedBundlingDefinition(value: any): string {
     .replace(/"/g, '\\"')
     .replace(/,/g, '\\,');
 }
-
-const devEnv = {
-  account: process.env.CDK_DEFAULT_ACCOUNT,
-  region: process.env.CDK_DEFAULT_REGION,
-};
-
-const app = new App();
-
-const stack = new Stack(app, 'my-stack-dev6', { env: devEnv });
-
-const pinger = new Pinger(stack, 'Pinger', { url: 'https://aws.amazon.com' });
-
-new CfnOutput(stack, 'HttpStatus', { value: pinger.httpStatus });
-new CfnOutput(stack, 'HtmlTitle', { value: pinger.htmlTitle });
-new CfnOutput(stack, 'URL', { value: pinger.url });
-new CfnOutput(stack, 'Body', { value: pinger.body });
-
-app.synth();
-
