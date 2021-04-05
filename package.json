@@ -1,5 +1,6 @@
 {
   "name": "cdk-http-pinger",
+  "description": "HTTP Pinger for AWS CDK",
   "repository": {
     "type": "git",
     "url": "https://github.com/pahud/cdk-http-pinger.git"
@@ -123,7 +124,12 @@
   "stability": "stable",
   "jsii": {
     "outdir": "dist",
-    "targets": {},
+    "targets": {
+      "python": {
+        "distName": "cdk-http-pinger",
+        "module": "cdk_http_pinger"
+      }
+    },
     "tsc": {
       "outDir": "lib",
       "rootDir": "src"

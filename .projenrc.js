@@ -28,6 +28,10 @@ const project = new AwsCdkConstructLibrary({
   ],
   deps: ['axios'],
   bundledDeps: ['axios'],
+  publishToPypi: {
+    distName: 'cdk-http-pinger',
+    module: 'cdk_http_pinger',
+  },
 });
 
 const automation = new Automation(project, {
@@ -46,6 +50,5 @@ const common_exclude = [
 
 project.npmignore.exclude(...common_exclude);
 project.gitignore.exclude(...common_exclude);
-
 
 project.synth();
