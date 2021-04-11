@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.8](https://github.com/pahud/cdk-http-pinger/compare/v0.1.7...v0.1.8) (2021-04-11)
+
+
+### Bug Fixes
+
+* integ default import pinger ([#11](https://github.com/pahud/cdk-http-pinger/issues/11)) ([20380a2](https://github.com/pahud/cdk-http-pinger/commit/20380a2491d467bb747cca09a1715eff46b220d7)), closes [#10](https://github.com/pahud/cdk-http-pinger/issues/10)
+
 ### [0.1.7](https://github.com/pahud/cdk-http-pinger/compare/v0.1.6...v0.1.7) (2021-04-11)
 
 ### [0.1.6](https://github.com/pahud/cdk-http-pinger/compare/v0.1.5...v0.1.6) (2021-04-10)
