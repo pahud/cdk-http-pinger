@@ -1,5 +1,5 @@
 import * as cdk from '@aws-cdk/core';
-import { Pinger } from '../src/pinger';
+import { Pinger } from './pinger';
 
 export class IntegTesting {
   readonly stack: cdk.Stack[];
