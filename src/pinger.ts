@@ -8,6 +8,10 @@ import * as cr from '@aws-cdk/custom-resources';
 export interface PingerProps {
   readonly parameter?: { [key: string]: string };
   readonly url: string;
+  /**
+   * optional entry file
+   */
+  readonly entry?: string;
 }
 
 export class Pinger extends Construct {
@@ -21,7 +25,7 @@ export class Pinger extends Construct {
 
     this.url = props.url;
     const onEvent = new NodejsFunction(this, 'ProviderFunc', {
-      entry: path.join(__dirname, '../src/lambda/index.ts'),
+      entry: props.entry ?? path.join(__dirname, './lambda/index.js'),
       handler: 'onEvent',
       runtime: lambda.Runtime.NODEJS_14_X,
       bundling: {
