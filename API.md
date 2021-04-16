@@ -35,6 +35,7 @@ new Pinger(scope: Construct, id: string, props: PingerProps)
 * **id** (<code>string</code>)  *No description*
 * **props** (<code>[PingerProps](#cdk-http-pinger-pingerprops)</code>)  *No description*
   * **url** (<code>string</code>)  *No description* 
+  * **entry** (<code>string</code>)  optional entry file. __*Optional*__
   * **parameter** (<code>Map<string, string></code>)  *No description* __*Optional*__
 
 
@@ -62,6 +63,7 @@ Name | Type | Description
 Name | Type | Description 
 -----|------|-------------
 **url** | <code>string</code> | <span></span>
+**entry**? | <code>string</code> | optional entry file.<br/>__*Optional*__
 **parameter**? | <code>Map<string, string></code> | __*Optional*__
 
 
