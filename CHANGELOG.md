@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.16](https://github.com/pahud/cdk-http-pinger/compare/v0.1.15...v0.1.16) (2021-04-16)
+
+
+### Bug Fixes
+
+* invalid entry for ebuild ([#20](https://github.com/pahud/cdk-http-pinger/issues/20)) ([8a7903e](https://github.com/pahud/cdk-http-pinger/commit/8a7903e52d623f606e0b5633e7f4febcf15f2761)), closes [#19](https://github.com/pahud/cdk-http-pinger/issues/19)
+
 ### [0.1.15](https://github.com/pahud/cdk-http-pinger/compare/v0.1.14...v0.1.15) (2021-04-16)
 
 ### [0.1.14](https://github.com/pahud/cdk-http-pinger/compare/v0.1.13...v0.1.14) (2021-04-15)
