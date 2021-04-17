@@ -110,6 +110,10 @@
       "type": "bundled"
     },
     {
+      "name": "esbuild",
+      "type": "bundled"
+    },
+    {
       "name": "@aws-cdk/aws-lambda-nodejs",
       "version": "^1.73.0",
       "type": "peer"
