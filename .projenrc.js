@@ -27,7 +27,10 @@ const project = new AwsCdkConstructLibrary({
     'projen-automate-it',
   ],
   deps: ['axios'],
-  bundledDeps: ['axios'],
+  bundledDeps: [
+    'axios',
+    'esbuild',
+  ],
   publishToPypi: {
     distName: 'cdk-http-pinger',
     module: 'cdk_http_pinger',
