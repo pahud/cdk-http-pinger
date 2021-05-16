@@ -1,6 +1,6 @@
 import * as path from 'path';
-import { NodejsFunction } from '@aws-cdk/aws-lambda-nodejs';
 import * as lambda from '@aws-cdk/aws-lambda';
+import { NodejsFunction } from '@aws-cdk/aws-lambda-nodejs';
 import * as logs from '@aws-cdk/aws-logs';
 import { Construct, CustomResource } from '@aws-cdk/core';
 import * as cr from '@aws-cdk/custom-resources';
