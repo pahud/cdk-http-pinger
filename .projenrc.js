@@ -1,7 +1,4 @@
 const { AwsCdkConstructLibrary } = require('projen');
-const { Automation } = require('projen-automate-it');
-
-const AUTOMATION_TOKEN = 'PROJEN_GITHUB_TOKEN';
 
 const project = new AwsCdkConstructLibrary({
   author: 'Pahud Hsieh',
@@ -24,7 +21,6 @@ const project = new AwsCdkConstructLibrary({
     '@aws-cdk/aws-ecs',
     '@aws-cdk/aws-ecs-patterns',
     'esbuild',
-    'projen-automate-it',
   ],
   deps: ['axios'],
   bundledDeps: [
@@ -36,13 +32,6 @@ const project = new AwsCdkConstructLibrary({
     module: 'cdk_http_pinger',
   },
 });
-
-const automation = new Automation(project, {
-  automationToken: AUTOMATION_TOKEN,
-});
-
-automation.projenYarnUpgrade();
-automation.autoApprove();
 
 const common_exclude = [
   'cdk.out',
