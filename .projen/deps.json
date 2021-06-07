@@ -89,13 +89,12 @@
       "type": "build"
     },
     {
-      "name": "npm-check-updates",
-      "version": "^11",
+      "name": "projen-automate-it",
       "type": "build"
     },
     {
       "name": "projen",
-      "version": "^0.18.11",
+      "version": "^0.22.8",
       "type": "build"
     },
     {
@@ -113,10 +112,6 @@
     },
     {
       "name": "axios",
-      "type": "bundled"
-    },
-    {
-      "name": "esbuild",
       "type": "bundled"
     },
     {
