@@ -1,5 +1,4 @@
-const { AwsCdkConstructLibrary } = require('projen');
-const { Automation } = require('projen-automate-it');
+const { AwsCdkConstructLibrary, DependenciesUpgradeMechanism } = require('projen');
 
 const AUTOMATION_TOKEN = 'PROJEN_GITHUB_TOKEN';
 
@@ -26,6 +25,16 @@ const project = new AwsCdkConstructLibrary({
     'esbuild',
     'projen-automate-it',
   ],
+  depsUpgrade: DependenciesUpgradeMechanism.githubWorkflow({
+    workflowOptions: {
+      labels: ['auto-approve', 'auto-merge'],
+      secret: AUTOMATION_TOKEN,
+    },
+  }),
+  autoApproveOptions: {
+    secret: 'GITHUB_TOKEN',
+    allowedUsernames: ['pahud'],
+  },
   deps: ['axios'],
   bundledDeps: ['axios'],
   publishToPypi: {
@@ -33,13 +42,6 @@ const project = new AwsCdkConstructLibrary({
     module: 'cdk_http_pinger',
   },
 });
-
-const automation = new Automation(project, {
-  automationToken: AUTOMATION_TOKEN,
-});
-
-automation.projenYarnUpgrade();
-automation.autoApprove();
 
 const common_exclude = [
   'cdk.out',
