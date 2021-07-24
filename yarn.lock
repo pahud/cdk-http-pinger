@@ -2409,9 +2409,9 @@ console-control-strings@^1.0.0, console-control-strings@~1.1.0:
   integrity sha1-PXz0Rk22RG6mRL9LOVB/mFEAjo4=
 
 constructs@^3.3.69:
-  version "3.3.100"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-3.3.100.tgz#8f5ca56b877a70f3ee48cedc36a40c20fb919547"
-  integrity sha512-Eu5IIr9ArS70iKtGPGsB/UFF4YHt0mno9urlmyFnHwm2nfT7QG+p0CaepLwg1vixUHV+9LqQf+/ZZPcqT2VCMw==
+  version "3.3.102"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-3.3.102.tgz#2710240579f9b0c8efcdae57291fe66b42ec56df"
+  integrity sha512-pxqg2czr0l/Yp6sk1NRQ7k5FrJVi2MEU3pgX0y3jpyiAShkTLSWpLldf/yyxHCamEnI7rkTBkUESqyN1+Zhmfw==
 
 conventional-changelog-angular@^5.0.12:
   version "5.0.12"
@@ -2919,9 +2919,9 @@ ecc-jsbn@~0.1.1:
     safer-buffer "^2.1.0"
 
 electron-to-chromium@^1.3.723:
-  version "1.3.785"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.785.tgz#79f546c69a6be4f30913aaace361bc746f26df48"
-  integrity sha512-WmCgAeURsMFiyoJ646eUaJQ7GNfvMRLXo+GamUyKVNEM4MqTAsXyC0f38JEB4N3BtbD0tlAKozGP5E2T9K3YGg==
+  version "1.3.786"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.786.tgz#1fc572abc77e2f474725f8a61acf7e25ced9fbe2"
+  integrity sha512-AmvbLBj3hepRk8v/DHrFF8gINxOFfDbrn6Ts3PcK46/FBdQb5OMmpamSpZQXSkfi77FfBzYtQtAk+00LCLYMVw==
 
 emittery@^0.7.1:
   version "0.7.2"
@@ -6231,10 +6231,10 @@ projen@^0.17:
     yaml "^1.10.2"
     yargs "^16.2.0"
 
-projen@^0.22.8:
-  version "0.22.8"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.22.8.tgz#40997b19a7c807a48aeba010b073950a24d3ce22"
-  integrity sha512-Xb1oaE7JANYTHrc3p8b4NR0MU1jCsEeXkqtMEVcyGE5ufF2eGFZKpHxB3tErzLBPD9PE41g2mvYQ+k9dZ5cxlA==
+projen@^0.27.6:
+  version "0.27.6"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.27.6.tgz#7bb19965b26f22c178390517cd28ebd84a3f121e"
+  integrity sha512-ufB2V9sh0JUpbUVIvctygFXCYgDIzq9D2oMatovtSyiGGcjbuket+IwjZB0UBTMO2wW7hWSsnJHUjLbozgVUlw==
   dependencies:
     "@iarna/toml" "^2.2.5"
     chalk "^4.1.1"
@@ -6242,7 +6242,6 @@ projen@^0.22.8:
     fs-extra "^9.1.0"
     glob "^7"
     ini "^2.0.0"
-    inquirer "^7.3.3"
     semver "^7.3.5"
     shx "^0.3.3"
     xmlbuilder2 "^2.4.1"
@@ -7204,9 +7203,9 @@ table@^6.0.9, table@^6.7.1:
     strip-ansi "^6.0.0"
 
 tar@^6.0.2, tar@^6.1.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/tar/-/tar-6.1.0.tgz#d1724e9bcc04b977b18d5c573b333a2207229a83"
-  integrity sha512-DUCttfhsnLCjwoDoFcI+B2iJgYa93vBnDUATYEeRx6sntCTdN01VnqsIuTlALXla/LWooNg0yEGeB+Y8WdFxGA==
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/tar/-/tar-6.1.1.tgz#4d7da4b132b334bb8c175ed1de466fe9157ea0eb"
+  integrity sha512-GG0R7yt/CQkvG4fueXDi52Zskqxe2AyRJ+Wm54yqarnBgcX3qRIWh10qLVAAN+mlPFGTfP5UxvD3Fbi11UOTUQ==
   dependencies:
     chownr "^2.0.0"
     fs-minipass "^2.0.0"

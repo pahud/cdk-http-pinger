@@ -26,6 +26,7 @@ const project = new AwsCdkConstructLibrary({
     'projen-automate-it',
   ],
   depsUpgrade: DependenciesUpgradeMechanism.githubWorkflow({
+    ignoreProjen: false,
     workflowOptions: {
       labels: ['auto-approve', 'auto-merge'],
       secret: AUTOMATION_TOKEN,
