@@ -18,6 +18,7 @@ const project = new AwsCdkConstructLibrary({
     '@aws-cdk/aws-lambda-nodejs',
     '@aws-cdk/custom-resources',
   ],
+  minNodeVersion: '12.20.0',
   devDeps: [
     '@aws-cdk/aws-ec2',
     '@aws-cdk/aws-ecs',
