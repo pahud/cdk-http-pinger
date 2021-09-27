@@ -56,27 +56,27 @@
     "jsii-pacmak": "^1.34.0",
     "json-schema": "^0.3.0",
     "npm-check-updates": "^11",
-    "projen": "^0.28.30",
+    "projen": "^0.28.31",
     "projen-automate-it": "^0.0.9",
     "standard-version": "^9",
     "ts-jest": "^26.5.6",
     "typescript": "^4.4.3"
   },
   "peerDependencies": {
-    "@aws-cdk/aws-lambda": "^1.73.0",
     "@aws-cdk/aws-lambda-nodejs": "^1.73.0",
+    "@aws-cdk/aws-lambda": "^1.73.0",
     "@aws-cdk/aws-logs": "^1.73.0",
     "@aws-cdk/core": "^1.73.0",
     "@aws-cdk/custom-resources": "^1.73.0",
     "constructs": "^3.2.27"
   },
   "dependencies": {
-    "@aws-cdk/aws-lambda": "^1.73.0",
+    "axios": "^0.21.4",
     "@aws-cdk/aws-lambda-nodejs": "^1.73.0",
+    "@aws-cdk/aws-lambda": "^1.73.0",
     "@aws-cdk/aws-logs": "^1.73.0",
     "@aws-cdk/core": "^1.73.0",
-    "@aws-cdk/custom-resources": "^1.73.0",
-    "axios": "^0.21.4"
+    "@aws-cdk/custom-resources": "^1.73.0"
   },
   "bundledDependencies": [
     "axios"
