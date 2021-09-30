@@ -36,9 +36,9 @@
   },
   "devDependencies": {
     "@aws-cdk/assert": "^1.73.0",
-    "@aws-cdk/aws-ec2": "^1.124.0",
-    "@aws-cdk/aws-ecs": "^1.124.0",
-    "@aws-cdk/aws-ecs-patterns": "^1.124.0",
+    "@aws-cdk/aws-ec2": "^1.125.0",
+    "@aws-cdk/aws-ecs": "^1.125.0",
+    "@aws-cdk/aws-ecs-patterns": "^1.125.0",
     "@types/jest": "^26.0.24",
     "@types/node": "^12.20.0",
     "@typescript-eslint/eslint-plugin": "^4.32.0",
