@@ -1,4 +1,4 @@
-const { AwsCdkConstructLibrary, DependenciesUpgradeMechanism, DevEnvironmentDockerImage, Gitpod } = require('projen');
+const { AwsCdkConstructLibrary, DevEnvironmentDockerImage, Gitpod } = require('projen');
 
 const AUTOMATION_TOKEN = 'PROJEN_GITHUB_TOKEN';
 
@@ -26,13 +26,13 @@ const project = new AwsCdkConstructLibrary({
     'esbuild',
     'projen-automate-it',
   ],
-  depsUpgrade: DependenciesUpgradeMechanism.githubWorkflow({
+  depsUpgradeOptions: {
     ignoreProjen: false,
     workflowOptions: {
       labels: ['auto-approve', 'auto-merge'],
       secret: AUTOMATION_TOKEN,
     },
-  }),
+  },
   autoApproveOptions: {
     secret: 'GITHUB_TOKEN',
     allowedUsernames: ['pahud'],
@@ -45,6 +45,11 @@ const project = new AwsCdkConstructLibrary({
   },
 });
 
+project.package.addField('resolutions', {
+  'pac-resolver': '^5.0.0',
+  'set-value': '^4.0.1',
+  'ansi-regex': '^5.0.1',
+});
 
 const gitpodPrebuild = project.addTask('gitpod:prebuild', {
   description: 'Prebuild setup for Gitpod',
@@ -76,7 +81,6 @@ gitpod.addVscodeExtensions(
   'ms-azuretools.vscode-docker',
   'AmazonWebServices.aws-toolkit-vscode',
 );
-
 
 const common_exclude = [
   'cdk.out',
