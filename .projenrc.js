@@ -15,16 +15,12 @@ const project = new AwsCdkConstructLibrary({
     '@aws-cdk/core',
     '@aws-cdk/aws-lambda',
     '@aws-cdk/aws-logs',
-    '@aws-cdk/aws-lambda-nodejs',
     '@aws-cdk/custom-resources',
   ],
-  minNodeVersion: '12.20.0',
   devDeps: [
     '@aws-cdk/aws-ec2',
     '@aws-cdk/aws-ecs',
     '@aws-cdk/aws-ecs-patterns',
-    'esbuild',
-    'projen-automate-it',
   ],
   depsUpgradeOptions: {
     ignoreProjen: false,
@@ -37,8 +33,6 @@ const project = new AwsCdkConstructLibrary({
     secret: 'GITHUB_TOKEN',
     allowedUsernames: ['pahud'],
   },
-  deps: ['axios'],
-  bundledDeps: ['axios'],
   publishToPypi: {
     distName: 'cdk-http-pinger',
     module: 'cdk_http_pinger',

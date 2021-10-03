@@ -1,5 +1,4 @@
 import '@aws-cdk/assert/jest';
-import * as path from 'path';
 import { SynthUtils } from '@aws-cdk/assert';
 import * as cdk from '@aws-cdk/core';
 import { Pinger } from '../src/pinger';
@@ -11,10 +10,6 @@ test('integ snapshot validation', () => {
 
   const pinger = new Pinger(stack, 'Pinger', {
     url: 'https://aws.amazon.com',
-    /**
-     * As jest will rm -rf ./lib, we need this to redirect the entry to src/index.ts
-     */
-    entry: path.join(__dirname, '../src/lambda/index.ts'),
   });
 
   new cdk.CfnOutput(stack, 'HttpStatus', { value: pinger.httpStatus });

@@ -32,6 +32,18 @@ Object {
     },
   },
   "Parameters": Object {
+    "AssetParameters6dc7aed79b11ba51b77b3eb1d4eeeaca220cce7e5bd9162db6563caba33f8241ArtifactHashB496736F": Object {
+      "Description": "Artifact hash for asset \\"6dc7aed79b11ba51b77b3eb1d4eeeaca220cce7e5bd9162db6563caba33f8241\\"",
+      "Type": "String",
+    },
+    "AssetParameters6dc7aed79b11ba51b77b3eb1d4eeeaca220cce7e5bd9162db6563caba33f8241S3BucketFCEF91EA": Object {
+      "Description": "S3 bucket for asset \\"6dc7aed79b11ba51b77b3eb1d4eeeaca220cce7e5bd9162db6563caba33f8241\\"",
+      "Type": "String",
+    },
+    "AssetParameters6dc7aed79b11ba51b77b3eb1d4eeeaca220cce7e5bd9162db6563caba33f8241S3VersionKeyA06A483E": Object {
+      "Description": "S3 key for asset version \\"6dc7aed79b11ba51b77b3eb1d4eeeaca220cce7e5bd9162db6563caba33f8241\\"",
+      "Type": "String",
+    },
     "AssetParametersb120b13d9d868c7622e7db1b68bae4c0f82ffd0227b8c15f2cef38e186ff3827ArtifactHash1355580A": Object {
       "Description": "Artifact hash for asset \\"b120b13d9d868c7622e7db1b68bae4c0f82ffd0227b8c15f2cef38e186ff3827\\"",
       "Type": "String",
@@ -42,18 +54,6 @@ Object {
     },
     "AssetParametersb120b13d9d868c7622e7db1b68bae4c0f82ffd0227b8c15f2cef38e186ff3827S3VersionKeyB95D17C3": Object {
       "Description": "S3 key for asset version \\"b120b13d9d868c7622e7db1b68bae4c0f82ffd0227b8c15f2cef38e186ff3827\\"",
-      "Type": "String",
-    },
-    "AssetParametersbf1caecef355dbe19a478e08c21a357ecba27b81ef3e6aad6a9010f09dd5f3c5ArtifactHash8C7550D0": Object {
-      "Description": "Artifact hash for asset \\"bf1caecef355dbe19a478e08c21a357ecba27b81ef3e6aad6a9010f09dd5f3c5\\"",
-      "Type": "String",
-    },
-    "AssetParametersbf1caecef355dbe19a478e08c21a357ecba27b81ef3e6aad6a9010f09dd5f3c5S3Bucket1824E724": Object {
-      "Description": "S3 bucket for asset \\"bf1caecef355dbe19a478e08c21a357ecba27b81ef3e6aad6a9010f09dd5f3c5\\"",
-      "Type": "String",
-    },
-    "AssetParametersbf1caecef355dbe19a478e08c21a357ecba27b81ef3e6aad6a9010f09dd5f3c5S3VersionKeyFDC39953": Object {
-      "Description": "S3 key for asset version \\"bf1caecef355dbe19a478e08c21a357ecba27b81ef3e6aad6a9010f09dd5f3c5\\"",
       "Type": "String",
     },
     "AssetParametersc691172cdeefa2c91b5a2907f9d81118e47597634943344795f1a844192dd49cArtifactHash627DAAA7": Object {
@@ -201,7 +201,7 @@ Object {
       "Properties": Object {
         "Code": Object {
           "S3Bucket": Object {
-            "Ref": "AssetParametersbf1caecef355dbe19a478e08c21a357ecba27b81ef3e6aad6a9010f09dd5f3c5S3Bucket1824E724",
+            "Ref": "AssetParameters6dc7aed79b11ba51b77b3eb1d4eeeaca220cce7e5bd9162db6563caba33f8241S3BucketFCEF91EA",
           },
           "S3Key": Object {
             "Fn::Join": Array [
@@ -214,7 +214,7 @@ Object {
                       "Fn::Split": Array [
                         "||",
                         Object {
-                          "Ref": "AssetParametersbf1caecef355dbe19a478e08c21a357ecba27b81ef3e6aad6a9010f09dd5f3c5S3VersionKeyFDC39953",
+                          "Ref": "AssetParameters6dc7aed79b11ba51b77b3eb1d4eeeaca220cce7e5bd9162db6563caba33f8241S3VersionKeyA06A483E",
                         },
                       ],
                     },
@@ -227,7 +227,7 @@ Object {
                       "Fn::Split": Array [
                         "||",
                         Object {
-                          "Ref": "AssetParametersbf1caecef355dbe19a478e08c21a357ecba27b81ef3e6aad6a9010f09dd5f3c5S3VersionKeyFDC39953",
+                          "Ref": "AssetParameters6dc7aed79b11ba51b77b3eb1d4eeeaca220cce7e5bd9162db6563caba33f8241S3VersionKeyA06A483E",
                         },
                       ],
                     },
@@ -237,19 +237,14 @@ Object {
             ],
           },
         },
-        "Environment": Object {
-          "Variables": Object {
-            "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1",
-          },
-        },
-        "Handler": "index.onEvent",
+        "Handler": "index.handler",
         "Role": Object {
           "Fn::GetAtt": Array [
             "PingerProviderFuncServiceRole61DD47CB",
             "Arn",
           ],
         },
-        "Runtime": "nodejs14.x",
+        "Runtime": "python3.9",
       },
       "Type": "AWS::Lambda::Function",
     },
