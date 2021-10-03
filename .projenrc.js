@@ -18,13 +18,11 @@ const project = new AwsCdkConstructLibrary({
     '@aws-cdk/aws-lambda-nodejs',
     '@aws-cdk/custom-resources',
   ],
-  minNodeVersion: '12.20.0',
   devDeps: [
     '@aws-cdk/aws-ec2',
     '@aws-cdk/aws-ecs',
     '@aws-cdk/aws-ecs-patterns',
     'esbuild',
-    'projen-automate-it',
   ],
   depsUpgradeOptions: {
     ignoreProjen: false,
@@ -44,7 +42,6 @@ const project = new AwsCdkConstructLibrary({
     module: 'cdk_http_pinger',
   },
 });
-
 
 const gitpodPrebuild = project.addTask('gitpod:prebuild', {
   description: 'Prebuild setup for Gitpod',
