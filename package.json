@@ -36,9 +36,9 @@
   },
   "devDependencies": {
     "@aws-cdk/assert": "^1.73.0",
-    "@aws-cdk/aws-ec2": "^1.125.0",
-    "@aws-cdk/aws-ecs": "^1.125.0",
-    "@aws-cdk/aws-ecs-patterns": "^1.125.0",
+    "@aws-cdk/aws-ec2": "^1.126.0",
+    "@aws-cdk/aws-ecs": "^1.126.0",
+    "@aws-cdk/aws-ecs-patterns": "^1.126.0",
     "@types/jest": "^27.0.2",
     "@types/node": "^14.17.0",
     "@typescript-eslint/eslint-plugin": "^4.33.0",
@@ -55,7 +55,7 @@
     "jsii-pacmak": "^1.36.0",
     "json-schema": "^0.3.0",
     "npm-check-updates": "^11",
-    "projen": "^0.29.5",
+    "projen": "^0.29.8",
     "standard-version": "^9",
     "ts-jest": "^27.0.5",
     "typescript": "^4.4.3"
