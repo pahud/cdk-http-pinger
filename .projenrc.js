@@ -11,6 +11,7 @@ const project = new AwsCdkConstructLibrary({
   name: 'cdk-http-pinger',
   description: 'HTTP Pinger for AWS CDK',
   repositoryUrl: 'https://github.com/pahud/cdk-http-pinger.git',
+  minNodeVersion: '12.20.0',
   cdkDependencies: [
     '@aws-cdk/core',
     '@aws-cdk/aws-lambda',
